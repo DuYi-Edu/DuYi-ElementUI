@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      margin-bottom: 20px;
+      padding: 20px ;
+    }
+
+    .box--red {
+      background-color: red;
+    }
+
+    .box--yellow {
+      background-color: yellow;
+    }
+
+    .box .box__input {
+      width: 400px;
+      height: 30px;
+      border-color: #ccc;
+      border-width: 1px;
+      outline: none;
+    }
+
+    .box .box__btn {
+      width: 100px;
+      background-color: #38f;
+      color: #fff;
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <input type="text" class="box__input">
+    <button class="box__btn">百度一下</button>
+  </div>
+
+  <div class="box box--red">
+    <input type="text" class="box__input">
+    <button class="box__btn">百度一下</button>
+  </div>
+
+  <div class="box box--yellow">
+    <input type="text" class="box__input">
+    <button class="box__btn">百度一下</button>
+  </div>
+</body>
+</html>
