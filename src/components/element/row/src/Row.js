@@ -31,15 +31,15 @@ export default {
       return style;
     },
   },
-  render (h) {
+  render(h) {
     return h(this.tag, {
       class: [
         'el-row',
-        {'el-row--flex': this.type === 'flex'},
+        { 'el-row--flex': this.type === 'flex' },
         this.justify !== 'start' && `is-justify-${this.justify}`,
-        this.align !== 'top' && `is-align-${this.align}`
+        this.align !== 'top' && `is-align-${this.align}`,
       ],
-      style: this.style
+      style: this.style,
     }, this.$slots.default);
-  }
+  },
 };

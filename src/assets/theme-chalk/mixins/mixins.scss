@@ -1,0 +1,34 @@
+@import "./config.scss";
+
+/** BEM
+----------------*/
+@mixin b($block) {
+  $B: $namespace + '-' + $block;
+
+  .#{$B} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  // &--flex
+  $currentSelector: "";
+
+  @each $unit in $modifier {
+    $currentSelector: $currentSelector + & + $modifier-separator + $unit + ',';
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}
+
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
