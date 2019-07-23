@@ -1,68 +1,11 @@
+@import "./mixins/mixins.scss";
+
 .hidden {
-
-  &-xs-only {
-    @media only screen and (max-width: 768px - 1) {
-      display: none;
-    }
-  }
-
-  &-sm-only {
-    @media only screen and (min-width: 768px) and (max-width: 992px - 1) {
-      display: none;
-    }
-  }
-
-  &-sm-and-down {
-    @media only screen and (max-width: 992px - 1) {
-      display: none;
-    }
-  }
-
-  &-sm-and-up {
-    @media only screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-
-  &-md-only {
-    @media only screen and (min-width: 992px) and (max-width: 1200px - 1) {
-      display: none;
-    }
-  }
-
-  &-md-and-down {
-    @media only screen and (max-width: 1200px - 1) {
-      display: none;
-    }
-  }
-
-  &-md-and-up {
-    @media only screen and (min-width: 992px) {
-      display: none;
-    }
-  }
-
-  &-lg-only {
-    @media only screen and (min-width: 1200px) and (max-width: 1920px - 1) {
-      display: none;
-    }
-  }
-
-  &-lg-and-down {
-    @media only screen and (max-width: 1920px - 1) {
-      display: none;
-    }
-  }
-
-  &-lg-and-up {
-    @media only screen and (min-width: 1200px) {
-      display: none;
-    }
-  }
-
-  &-xl-only {
-    @media only screen and (min-width: 1920px) {
-      display: none;
+  @each $break-points-name, $value in $--breakpoints-spec {
+    &-#{$break-points-name} {
+      @include res($break-points-name, $--breakpoints-spec) {
+        display: none !important;
+      }
     }
   }
 }

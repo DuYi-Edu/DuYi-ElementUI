@@ -1,4 +1,5 @@
 @import "./config.scss";
+@import "../common/var.scss";
 
 /** BEM
 ----------------*/
@@ -32,3 +33,15 @@
     }
   }
 }
+
+/* 断点 （break points）
+------------------------*/
+@mixin res($key, $map: $--breakpoints) {
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))} {
+      @content;
+    }
+  } @else {
+    @warn "undefined points: `#{$map}`"
+  }
+};
