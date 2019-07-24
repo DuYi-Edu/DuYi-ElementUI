@@ -88,10 +88,10 @@ export default {
       return classList;
     },
   },
-  render (h) {
+  render(h) {
     return h(this.tag, {
       class: ['el-col', this.classList],
       style: this.style,
-    }, this.$slots.default)
-  }
+    }, this.$slots.default);
+  },
 };
