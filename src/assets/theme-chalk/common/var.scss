@@ -10,6 +10,43 @@ $--footer-padding: 0 20px !default;
 --------------------------*/
 $--main-padding: 0 20px !default;
 
+/** Color
+---------------------------*/
+$--color-primary: #409eff !default;
+$--color-white: #ffffff !default;
+$--color-black: #000000 !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default;
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default;
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default;
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default;
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default;
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default;
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
+// 辅助色
+$--color-success: #67c23a !default; // 成功颜色
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning: #e6a23c !default; // 警告颜色
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger: #f56c6c !default; // 危险颜色
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info: #909399 !default; // 信息颜色
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+// 中性色
+$--color-text-primary: #303133 !default; // 主要文字
+$--color-text-regular: #606266 !default; // 常规文字
+$--color-text-secondary: #909399 !default; // 次要文字
+$--color-text-placeholder: #c0c4cc !default;  // 占位文字
+$--border-color-base: #dcdfe6 !default; // 一级边框
+$--border-color-light: #e4e7eD !default; // 二级边框
+$--border-color-lighter: #ebeef5 !default; // 三级边框
+$--border-color-extra-light: #f2f6fc !default; // 四级边框
+
 /* Break Point
 --------------------------*/
 $--sm: 768px !default;
