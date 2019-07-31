@@ -47,6 +47,26 @@ $--border-color-light: #e4e7eD !default; // 二级边框
 $--border-color-lighter: #ebeef5 !default; // 三级边框
 $--border-color-extra-light: #f2f6fc !default; // 四级边框
 
+/** Typography
+-------------------------------*/
+$--font-size-extra-large: 20px !default; // 主标题
+$--font-size-large: 18px !default; // 标题
+$--font-size-medium: 16px !default; // 小标题
+$--font-size-base: 14px !default; // 正文
+$--font-size-small: 13px !default; // 正文（小）
+$--font-size-extra-small: 12px !default; // 正文（小）
+
+/** Border
+----------------------------*/
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-base: 1px solid $--border-color-base !default;
+$--border-radius-base: 4px !default; // 大圆角
+$--border-radius-small: 2px !default; // 小圆角
+$--border-radius-zero: 0 !default; // 无圆角
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, .1) !default;
+
 /* Break Point
 --------------------------*/
 $--sm: 768px !default;
