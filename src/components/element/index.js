@@ -7,6 +7,9 @@ import Footer from '@element/footer';
 import Aside from '@element/aside';
 import Icon from '@element/icon';
 
+const haha = 'haha';
+console.log(haha);
+
 const components = [
   Row,
   Col,
