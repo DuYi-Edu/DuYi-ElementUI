@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <el-button>默认按123钮</el-button>
   </div>
 </template>
 
