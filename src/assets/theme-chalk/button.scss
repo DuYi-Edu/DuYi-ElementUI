@@ -35,6 +35,21 @@
     color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
   }
 
+
+  @include when(plain) {
+    &:hover {
+      background-color: $--color-white;
+      border-color: $--color-primary;
+      color: $--color-primary;
+    }
+
+    &:active {
+      border-color: mix($--color-black, $--color-primary, 10%);
+      color: mix($--color-black, $--color-primary, 10%);
+    }
+  }
+
+
   @include m(primary) {
     @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
   }
@@ -46,7 +61,7 @@
   @include m(info) {
     @include button-variant($--button-info-background-color, $--button-info-border-color, $--button-info-font-color);
   }
-  
+
   @include m(warning) {
     @include button-variant($--button-warning-background-color, $--button-warning-border-color, $--button-warning-font-color);
   }
