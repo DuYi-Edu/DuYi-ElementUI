@@ -1,0 +1,19 @@
+@import "../common/var.scss";
+
+@mixin button-variant ($backgroundColor, $borderColor, $fontColor) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  border-color: $borderColor;
+
+  &:hover {
+    background-color: mix($--color-white, $backgroundColor, $--button-hover-tint-percent);
+    border-color: mix($--color-white, $borderColor, $--button-hover-tint-percent);
+    color: $fontColor;
+  }
+
+  &:active {
+    background-color: mix($--color-black, $backgroundColor, $--button-active-shade-percent);
+    border-color: mix($--color-black, $borderColor, $--button-active-shade-percent);
+    color: $fontColor;
+  }
+}
