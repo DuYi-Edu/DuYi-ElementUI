@@ -60,14 +60,7 @@
     border-radius: 50%;
     padding: $--button-padding-vertical;
   }
-
-
-  .el-button.is-disabled,
-  .el-button.is-disabled.is-plain {
-    background-color: #fff;
-    border-color: #ebeef5;
-    color: #c0c4cc;
-  }
+  
   @include when(disabled) {
     &,
     &.is-plain {
