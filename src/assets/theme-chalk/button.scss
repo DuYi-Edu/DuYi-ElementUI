@@ -8,6 +8,7 @@
   outline: none;
   margin: 0;
   transition-duration: .1s;
+  line-height: 1;
 
   border: $--border-base;
   background-color: $--button-default-background-color;
@@ -49,6 +50,33 @@
     }
   }
 
+  @include when(round) {
+    border-radius: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
+  }
+
+
+  .el-button.is-disabled,
+  .el-button.is-disabled.is-plain {
+    background-color: #fff;
+    border-color: #ebeef5;
+    color: #c0c4cc;
+  }
+  @include when(disabled) {
+    &,
+    &.is-plain {
+      cursor: not-allowed;
+      background-color: $--button-disabled-background-color;
+      border-color: $--button-disabled-border-color;
+      color: $--button-disabled-font-color;
+    }
+  }
 
   @include m(primary) {
     @include button-variant($--button-primary-background-color, $--button-primary-border-color, $--button-primary-font-color);
