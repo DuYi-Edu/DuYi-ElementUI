@@ -75,7 +75,7 @@
       <el-button type="info" icon="el-icon-message" circle size="small"></el-button>
       <el-button type="warning" icon="el-icon-star-off" circle size="mini"></el-button>
     </el-row> -->
-    <el-button-group>
+    <!-- <el-button-group>
       <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
       <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
     </el-button-group>
@@ -92,7 +92,9 @@
     </el-button-group>
      <el-button-group>
       <el-button circle type="primary" icon="el-icon-delete"></el-button>
-    </el-button-group>
+    </el-button-group> -->
+    <el-button autofocus type="primary">按钮</el-button>
+    <el-button @click="handleClick" native-type="submit" type="primary">按钮</el-button>
   </div>
 </template>
 
@@ -100,7 +102,10 @@
 
 export default {
   name: 'app',
-  components: {
+  methods: {
+    handleClick(e) {
+      console.log(e);
+    },
   },
 };
 </script>

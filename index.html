@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+  <div id="app">
+    <el-button autofocus type="primary">按钮</el-button>
+    <el-button @click="handleClick" type="primary">按钮</el-button>
+    <el-button native-type="reset" type="primary">按钮</el-button>
+
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      methods: {
+        handleClick () {
+          console.log('xxxx');
+        }
+      }
+    })
+  </script>
+</body>
+</html>
