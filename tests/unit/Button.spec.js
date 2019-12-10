@@ -9,6 +9,7 @@ describe('Button.vue', () => {
     wrapper = shallowMount(Button);
     buttonEle = wrapper.vm.$el;
   });
+
   it('size', () => {
     wrapper.setProps({
       size: 'medium',
@@ -49,14 +50,6 @@ describe('Button.vue', () => {
     expect(buttonEle.classList).toContain('is-circle');
   });
 
-  it('loading', () => {
-    wrapper.setProps({
-      loading: true,
-    });
-
-    expect(wrapper.html()).toContain('<i class="el-icon-loading"></i>');
-  });
-
   it('disabled', () => {
     wrapper.setProps({
       disabled: true,
@@ -65,6 +58,14 @@ describe('Button.vue', () => {
     expect(buttonEle.classList).toContain('is-disabled');
   });
 
+  it('loading', () => {
+    wrapper.setProps({
+      loading: true,
+    });
+
+    expect(wrapper.html()).toContain('<i class="el-icon-loading"></i>');
+  });
+  
   it('icon', () => {
     wrapper.setProps({
       icon: 'el-icon-edit',
@@ -90,9 +91,7 @@ describe('Button.vue', () => {
   });
 
   it('click', () => {
-    const buttonVm = wrapper.find(Button);
-    wrapper.find('button').trigger('click');
-    expect(buttonVm.emitted().click).toBeTruthy();
+    wrapper.trigger('click');
     expect(wrapper.emitted().click).toBeTruthy();
   });
 });
