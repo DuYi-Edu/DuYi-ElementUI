@@ -9,6 +9,7 @@ import Icon from '@element/icon';
 import Button from '@element/button';
 import ButtonGroup from '@element/button-group';
 import Link from '@element/link';
+import Radio from '@element/radio';
 
 const components = [
   Row,
@@ -22,6 +23,7 @@ const components = [
   Button,
   ButtonGroup,
   Link,
+  Radio,
 ];
 
 const install = (Vue) => {
@@ -44,6 +46,7 @@ export default {
   Button,
   ButtonGroup,
   Link,
+  Radio,
 };
 
 export {
@@ -59,4 +62,5 @@ export {
   Button,
   ButtonGroup,
   Link,
+  Radio,
 };
