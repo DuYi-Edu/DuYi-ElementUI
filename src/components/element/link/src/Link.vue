@@ -9,6 +9,7 @@
       }
     ]"
     :href="href"
+    @click="handleClick"
   >
     <i v-if="icon" :class="icon"></i>
     <span v-if="$slots.default">
@@ -30,6 +31,14 @@ export default {
     type: String,
     disabled: Boolean,
     icon: String,
+  },
+
+  methods: {
+    handleClick(e) {
+      if (!this.disabled && !this.href) {
+        this.$emit('click', e);
+      }
+    },
   },
 };
 </script>
