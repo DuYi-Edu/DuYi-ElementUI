@@ -1,5 +1,66 @@
 @import "./mixins/mixins.scss";
+@import "./common/var.scss";
+
+$typeMap: (
+  primary: $--link-primary-font-color,
+  success: $--link-success-font-color,
+  danger: $--link-danger-font-color,
+  warning: $--link-warning-font-color,
+  info: $--link-info-font-color,
+);
 
 @include b(link) {
+  position: relative;
+  text-decoration: none;
+  font-size: $--link-font-size;
+  font-weight: $--link-font-weight;
+  color: $--link-default-font-color;
+
+  &:hover {
+    color: $--link-active-font-color;
+  }
+
+  [class *= "el-icon-"] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
+  @include when(underline) {
+    &:hover::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      border-bottom: 1px solid $--link-active-font-color;
+    }
+  }
+
+  @include when(disabled) {
+    cursor: not-allowed;
+    color: #c0c4cc;
+  }
+
+  @each $type, $color in $typeMap {
+    @include m($type) {
+      color: $color;
+
+      &:hover {
+        color: mix($--color-white, $color, 20%);
+      }
+
+      @include when(underline) {
+        &:hover::after {
+          border-bottom-color: $color;
+        }
+      }
+
+      @include when(disabled) {
+        color: mix($--color-white, $color);
+      }
+    }
+  }
   
 }

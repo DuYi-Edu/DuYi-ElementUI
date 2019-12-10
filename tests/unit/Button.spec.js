@@ -65,7 +65,7 @@ describe('Button.vue', () => {
 
     expect(wrapper.html()).toContain('<i class="el-icon-loading"></i>');
   });
-  
+
   it('icon', () => {
     wrapper.setProps({
       icon: 'el-icon-edit',

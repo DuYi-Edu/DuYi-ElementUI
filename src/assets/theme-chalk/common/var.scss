@@ -125,6 +125,19 @@ $--button-disabled-font-color: $--color-text-placeholder !default; // #c0c4cc
 $--button-active-shade-percent: 10% !default;
 $--button-hover-tint-percent: 20% !default;
 
+/** Link
+-----------------------------*/
+$--link-font-size: $--font-size-base !default; // 14px
+$--link-font-weight: $--font-weight-primary !default; // 500
+$--link-default-font-color: $--color-text-regular !default; // 606266
+$--link-active-font-color: $--color-primary !default; // 409eff
+$--link-primary-font-color: $--color-primary !default; // 409eff
+$--link-success-font-color: $--color-success !default; 
+$--link-warning-font-color: $--color-warning !default; 
+$--link-danger-font-color: $--color-danger !default; 
+$--link-info-font-color: $--color-info !default; 
+
+
 
 /* Break Point
 --------------------------*/
